@@ -52,4 +52,13 @@ public class NoteUI : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //Draw gizmos over notes
+    public float GizmosRadius = 1.0f;
+
+    public virtual void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, GizmosRadius);
+    }
+
 }
